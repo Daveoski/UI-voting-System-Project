@@ -45,7 +45,7 @@ form.addEventListener("submit", function (e) {
     votes[selected]++;
 
     updateVoteCount();
-
+    
     showWinner();
 
     form.reset();
