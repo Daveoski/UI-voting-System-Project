@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Voting System</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 via-white to-purple-100 min-h-screen">
+
+<div class="flex justify-center items-center min-h-screen p-5">
+
+<div class="bg-white max-w-lg w-full rounded-3xl shadow-2xl p-8">
+
+<h1 class="text-4xl font-bold text-center text-blue-700">
+🗳 Smart Voting System
+</h1>
+
+<p class="text-center text-gray-500">
+Cast your vote securely
+</p>
+
+<p id="clock" class="text-center text-blue-600 mt-3 font-semibold"></p>
+
+<form id="voteForm" class="space-y-5 mt-6">
+
+<div>
+
+<label class="font-semibold">Voter's Name</label>
+
+<input
+type="text"
+id="voterName"
+required
+placeholder="Enter your name"
+class="w-full border rounded-xl p-3">
+
+</div>
+
+<div>
+
+<label class="font-semibold">Choose Candidate</label>
+
+<select
+id="candidate"
+required
+class="w-full border rounded-xl p-3">
+
+<option value="">Select Candidate</option>
+<option value="Lilian">Lilian</option>
+<option value="Austin">Austin</option>
+<option value="Kosi">Kosi</option>
+<option value="David">David</option>
+
+</select>
+
+</div>
+
+<button
+type="submit"
+class="w-full bg-blue-600 text-white p-3 rounded-xl hover:bg-blue-700">
+
+Vote
+
+</button>
+
+</form>
+
+<div class="mt-8">
+
+<h2 class="font-bold text-xl text-blue-600">
+
+🏅 Leaderboard
+
+</h2>
+
+<div id="leaderboard"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="fixed bottom-6 left-6 bg-white shadow-xl rounded-xl p-5 w-56">
+
+<h2 class="font-bold text-blue-600">
+Votes Per Candidate
+</h2>
+
+<p>Lilian : <span id="LilianVotes">0</span></p>
+<p>Austin : <span id="AustinVotes">0</span></p>
+<p>Kosi : <span id="KosiVotes">0</span></p>
+<p>David : <span id="DavidVotes">0</span></p>
+
+</div>
+
+<div class="fixed bottom-6 right-6 bg-blue-600 text-white rounded-xl shadow-xl p-5 w-52">
+
+<h2 class="font-bold">
+
+Total Votes
+
+</h2>
+
+<p
+id="totalVotes"
+class="text-5xl text-center">
+
+0
+
+</p>
+
+</div>
+
+<!-- Winner -->
+
+<div
+id="winnerModal"
+class="hidden fixed inset-0 bg-black/60 flex justify-center items-center">
+
+<div class="bg-white p-8 rounded-3xl text-center">
+
+<h2 class="text-3xl text-green-600 font-bold">
+
+🏆 Winner
+
+</h2>
+
+<p
+id="winnerName"
+class="text-2xl mt-5">
+
+</p>
+
+<button
+id="closeModal"
+class="bg-red-500 text-white px-6 py-3 rounded-xl mt-6">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+<script src="voting.js"></script>
+
+</body>
+</html>
