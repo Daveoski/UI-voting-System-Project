@@ -43,19 +43,11 @@ class="w-full border p-3">
 
 <label class="font-semibold" color="green-500">Choose Candidate</label>
 
+<!-- Options are built from the CANDIDATES list in voting.ts -->
 <select
 id="candidate"
 required
-class="w-full border p-3">
-class = "bg-green-500 text-white"
-
-<option value="">Select Candidate</option>
-<option value="Lilian">Lilian</option>
-<option value="Austin">Austin</option>
-<option value="Kosi">Kosi</option>
-<option value="David">David</option>
-
-</select>
+class="w-full border p-3"></select>
 
 </div>
 
@@ -85,10 +77,8 @@ Vote
 Votes For Each Candidate (Qualified Voters Only)
 </h2>
 
-<p>Lilian : <span id="LilianVotes">0</span></p>
-<p>Austin : <span id="AustinVotes">0</span></p>
-<p>Kosi : <span id="KosiVotes">0</span></p>
-<p>David : <span id="DavidVotes">0</span></p>
+<!-- One row per candidate, built in voting.ts -->
+<div id="tallyBoard"></div>
 
 </div>
 
@@ -120,11 +110,11 @@ class="hidden fixed inset-0 bg-black/60 flex justify-center items-center">
 
 </h2>
 
-<p
+<div
 id="winnerName"
 class="text-2xl mt-5">
 
-</p>
+</div>
 
 <button
 id="closeModal"
@@ -138,7 +128,8 @@ Close
 
 </div>
 
-<script src="voting.js"></script>
+<!-- Compiled from voting.ts — run "npm run build" after editing the TypeScript -->
+<script src="dist/voting.js"></script>
 
 </body>
 </html>

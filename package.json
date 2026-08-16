@@ -1,0 +1,14 @@
+{
+  "name": "daveoski-smart-voting-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daveoski INEC Smart Voting System",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
